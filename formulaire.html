@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire DWWM</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        *:focus {
+            outline: none;
+        }
+        
+        body {
+            background-color: #a9d7e9;
+        }
+        
+        input {
+            padding-left: 5px;
+            padding-right: 5px;
+            height: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+         ::placeholder {
+            color: black;
+            text-indent: 5px;
+            transform: .3s ease;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 30px;
+            text-transform: capitalize;
+        }
+        
+        form {
+            background-color: #f3f3f3;
+            width: 400px;
+            border-radius: 10px;
+            padding: 30px;
+            margin: auto;
+            display: grid;
+        }
+        
+        .name {
+            display: flex;
+        }
+        
+        .sous1,
+        .sous2 {
+            width: 50%;
+            padding: 15px;
+        }
+        
+        .sous1 {
+            text-align: right;
+        }
+        
+        input[type="submit"] {
+            width: 100px;
+            height: 30px;
+            background-color: #6ba2ce;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            margin: auto;
+            cursor: pointer;
+            transition: .4s ease;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: white;
+            color: black;
+            font-size: large;
+            transform: scaleZ(1.1);
+        }
+        
+        select {
+            width: 100%;
+            height: 50px;
+            padding-left: 10px;
+        }
+        
+        textarea {
+            border: none;
+            border-radius: 10px;
+            text-indent: 5px;
+        }
+        
+        span {
+            vertical-align: super;
+            padding-left: 10px;
+            margin-top: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulaire DWWM</h1>
+    <form action="#">
+        <div class="name">
+            <div class="sous1">
+                Nom
+            </div>
+            <div class="sous2">
+                <input type="text" placeholder="Entrez votre nom">
+            </div>
+        </div>
+        <div class="name">
+            <div class="sous1">
+                Email
+            </div>
+            <div class="sous2"><input type="email" placeholder="Entrez votre email"></div>
+        </div>
+        <div class="name">
+            <div class="sous1">
+                Indiquez votre satisfaction au cous de 1 à 10
+            </div>
+            <div class="sous2"><input type="number" placeholder="numéro de 1 à 10"></div>
+        </div>
+        <div class="name">
+            <div class="sous1">
+                Qui est votre Coach?
+            </div>
+            <div class="sous2">
+                <select id="cname">
+                    <option placeholder="Birante">Birante</option>
+                    <option placeholder="Birante">Mamadou</option>
+                    <option placeholder="Birante">Malick</option>
+                </select>
+            </div>
+        </div>
+        <div class="name">
+            <div class="sous1">
+                A quel moment avez-vous cours?
+            </div>
+            <div class="sous2">
+                <input type="radio"><span>Matin</span><br>
+                <input type="radio"><span>Après-midi</span><br>
+                <input type="radio"><span>Soir</span><br>
+            </div>
+        </div>
+        <div class="name">
+            <div class="sous1">
+                Quels outils avez-vous rencontrés jusque là?<br>(Selectionnez tout ce qui s'applique)
+            </div>
+            <div class="sous2">
+                <input type="checkbox"> <span>HTML</span> <br>
+                <input type="checkbox"> <span>CSS</span> <br>
+                <input type="checkbox"> <span>JavaScript</span> <br>
+                <input type="checkbox"> <span>Editeur de texte</span> <br>
+                <input type="checkbox"> <span>Ligne de commande</span> <br>
+            </div>
+        </div>
+        <div class="name">
+            <div class="sous1">
+                Décrivez votre expérience jusque là
+            </div>
+            <div class="sous2">
+                <textarea name="opinion" col="20" rows="4" id="textarea" placeholder="Décrivez votre expérience ici ..."></textarea>
+            </div>
+        </div>
+        <input type="submit" placeholder="Envoyer">
+    </form>
+</body>
+
+</html>
